@@ -1,7 +1,22 @@
 @(message: String)
 
 @main("Welcome to Play") {
-    @message
-    <!-- @play20.welcome(message, style = "Java") -->
+	<div>
+		<ul>
+			<li data-bind="foreach:commodityList">
+				<p></p>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li data-bind="foreach:choiseList">
+				
+			</li>
+		</ul>
+	</div>
+	<div data-bind="foreach:items">
+    	<span data-bind="text: itemName"></span>
+    </div>
 
 }

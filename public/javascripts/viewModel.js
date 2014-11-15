@@ -1,13 +1,12 @@
 $(function(){
-	var myViewModel = 
-	{
-	    personName: 'ボブ',
-	    personAge: 123
-	},
-	{
-		personName: 'ボブ',
-	    personAge: 123
-
+	function myViewModel() { 
+		var self = this;
+     
+	    self.items = ko.observableArray([
+	        { itemName: 'Bert' },
+	        { itemName: 'Charles' },
+	        { itemName: 'Denise' }
+	    ]);
 	}
 	ko.applyBindings(myViewModel);
 })
