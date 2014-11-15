@@ -1,23 +1,39 @@
 @(message: String)
 
 @main("お買い物リスト") {
-
-	<div class="col-xs-8 col-md-8 col-sm-8 col-lg-8" >
-		<ul data-bind="foreach:comodityItems">
-			<li data-bind="click:clickComodityItem.bind($data)">
-				<p data-bind="text:itemName"></p>
-				<p data-bind="text:cost"></p>
-			</li>
-		</ul>
+	<div class="listBox_contaner">
+		<div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 list_box" >
+			<div>
+    			<span>商品を検索：</span><input type="text" class="serch_text" /><i class="glyphicon glyphicon-search"></i><br>
+			</div>
+			<ul data-bind="foreach:comodityItems">
+				<li data-bind="click:clickComodityItem.bind($data)" class="list_Item">
+					<p data-bind="text:itemName"></p>
+					<p data-bind="text:cost"></p>
+				</li>
+			</ul>
+		</div>
+		<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4 list_box" >
+			<div>
+    			<span>候補リスト
+			</div>
+			<ul data-bind="foreach:likeItems">
+				<li data-bind="click:clicklikeItems.bind($data)"  class="list_Item">
+					<p data-bind="text:itemName"></p>
+					<p data-bind="text:cost"></p>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4" >
-		<ul data-bind="foreach:likeItems">
-			<li data-bind="click:clicklikeItems.bind($data)">
-				<p data-bind="text:itemName"></p>
-				<p data-bind="text:cost"></p>
-			</li>
-		</ul>
-	</div>
-
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dev_education -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-7320220894167788"
+     data-ad-slot="6217877350"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 }
+
