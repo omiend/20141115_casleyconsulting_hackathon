@@ -1,6 +1,6 @@
+item = [];
 ;(function ($) {
-
-  getCommodity();
+  getCommodity()
 
 })(jQuery);
 
@@ -11,6 +11,8 @@ function getCommodity() {
     complete: function() {},
     success: function(result) {
       console.log(result)
+      item = result;
+      console.log(item)
     },
     error: function(result) {
       window.alert("エラーが発生しました。画面を更新して頂くか、時間をおいてから再度お試し下さい。");

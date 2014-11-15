@@ -2,12 +2,25 @@
 
 @main("お買い物リスト") {
 
-	<div class="col-xs-8 col-md-8 col-sm-8 col-lg-8">
-		TEST
+	<div class="col-xs-8 col-md-8 col-sm-8 col-lg-8" >
+		<ul data-bind="foreach:comodityItems">
+			<li><span data-bind="text:itemName, click:clickComodityItem.bind($data)"></li>
+		</ul>
 	</div>
-	<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
-		TEST
+	<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4" >
+		<ul data-bind="foreach:likeItems">
+			<li><span data-bind="text:itemName, click:clicklikeItems.bind($data)"></li>
+		</ul>
 	</div>
-
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dev_education -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-7320220894167788"
+     data-ad-slot="6217877350"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 }
+
