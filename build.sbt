@@ -1,4 +1,4 @@
-name := """casley_hackathon"""
+name := """20141115_casleyconsulting_hackathon"""
 
 version := "1.0-SNAPSHOT"
 
