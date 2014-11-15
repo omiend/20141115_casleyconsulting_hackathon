@@ -1,22 +1,17 @@
 @(message: String)
 
-@main("Welcome to Play") {
-	<div>
-		<ul>
-			<li data-bind="foreach:item">
-				<p data-bind="text:ID"></p>
-			</li>
+@main("お買い物リスト") {
+
+	<div class="col-xs-8 col-md-8 col-sm-8 col-lg-8" >
+		<ul data-bind="foreach:comodityItems">
+			<li><span data-bind="text:itemName"></li>
 		</ul>
 	</div>
-	<div>
-		<ul>
-			<li data-bind="foreach:choiseList">
-				
-			</li>
+	<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4" >
+		<ul data-bind="foreach:comodityItems">
+			<li><span data-bind="text:itemName"></li>
 		</ul>
 	</div>
-	<div data-bind="foreach:items">
-    	<span data-bind="text: itemName"></span>
-    </div>
+
 
 }

@@ -6,15 +6,11 @@ $(function(){
 		var self = this;
      
 	    self.comodityItems = ko.observableArray([
-	        { itemName: 'ワンピースあまぞn', },
-	        { itemName: 'ワンピースあーす' },
-	        { itemName: 'ワンピースユニクロ' }
+	        { itemName: 'ワンピースあまぞn', cost:'2450円', like:"false"},
+	        { itemName: 'ワンピースあーす' , cost:'5450円', like:"false"},
+	        { itemName: 'ワンピースユニクロ', cost:'1450円',like:"false"}
 	    ]);
-	    self.likeItems = ko.observableArray([
-	        { itemName: 'ワンピースあまぞn', },
-	        { itemName: 'ワンピースあーす' },
-	        { itemName: 'ワンピースユニクロ' }
-	    ]);
+	    self.likeItems = ko.observableArray([]);
 	}
 	ko.applyBindings(myViewModel);
 })
