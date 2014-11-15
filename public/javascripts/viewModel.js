@@ -1,11 +1,19 @@
 $(function(){
+	$.getJSON("test.js", function(json){
+  		alert("JSON Data: " + json.users[3].name);
+	});
 	function myViewModel() { 
 		var self = this;
      
-	    self.items = ko.observableArray([
-	        { itemName: 'Bert' },
-	        { itemName: 'Charles' },
-	        { itemName: 'Denise' }
+	    self.comodityItems = ko.observableArray([
+	        { itemName: 'ワンピースあまぞn', },
+	        { itemName: 'ワンピースあーす' },
+	        { itemName: 'ワンピースユニクロ' }
+	    ]);
+	    self.likeItems = ko.observableArray([
+	        { itemName: 'ワンピースあまぞn', },
+	        { itemName: 'ワンピースあーす' },
+	        { itemName: 'ワンピースユニクロ' }
 	    ]);
 	}
 	ko.applyBindings(myViewModel);
